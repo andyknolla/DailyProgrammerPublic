@@ -1,0 +1,17 @@
+main {
+  background: red;
+}
+
+.numbers {
+  width: 200px;
+  height: auto;
+  background: red;
+}
+
+.button {
+  background: black;
+  color: red;
+  border-radius: 50%;
+  height:70px;
+  margin: 10px;
+}
