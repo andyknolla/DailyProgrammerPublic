@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-var fuzzySearch = require('../solutions/bda')
+var fuzzySearch = require('../solutions/mySolution')
 
 var names = ["mike", "fred", "rob", "dave", "jack", "marry", "mark", "jim", "jill", "june", "jess", "grey", "greg", "mark", "jenn", "richard", "robert"]
 
@@ -15,11 +15,11 @@ describe("fuzzy-search", function() {
 		});
 	});
 	describe("complete search", function() {
-		xit("should return a list of words that match part of the search", function() {
+		it("should return a list of words that match part of the search", function() {
 			var result = fuzzySearch('rob', names, true, 1);
 			expect(result).to.deep.equal(['rob', 'robert']);
 		});
-		xit("should return an empty list if input is blank", function() {
+		it("should return an empty list if input is blank", function() {
 			var result = fuzzySearch('', names);
 			expect(result).to.deep.equal([]);
 		});
@@ -31,7 +31,7 @@ describe("fuzzy-search", function() {
 		});
 	});
 	describe("fuzzy search", function() {
-		xit("should return a list of words that match off one character", function() {
+		it("should return a list of words that match off one character", function() {
 			var result1 = fuzzySearch('jit', names, true, 1);
 			var result2 = fuzzySearch('mart', names, true, 1);
 			var result3 = fuzzySearch('freg', names, true, 1);
