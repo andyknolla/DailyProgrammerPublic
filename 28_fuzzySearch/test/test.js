@@ -48,24 +48,24 @@ describe("fuzzy-search", function() {
 		});
 	});
 	describe('extra features', function() {
-		xit("should be case insensitive", function() {
+		it("should be case insensitive", function() {
 			var result = fuzzySearch('JaCK', names);
 			expect(result).to.deep.equal(['jack']);
 		});
-		xit("should handle white space", function() {
+		it("should handle white space", function() {
 			var result = fuzzySearch('        june    ', names);
 			expect(result).to.deep.equal(['june']);
 		});
 	});
 	describe('stretch', function() {
-		xit("should make fuzzy search an option" ,  function() {
+		it("should make fuzzy search an option" ,  function() {
 			// example: fuzzySearch(search, listOfWords, fuzzySearch)
 			var result1 = fuzzySearch('richar', names, false);
 			var result2 = fuzzySearch('richar', names, true, 1);
 			expect(result1).to.deep.equal([]);
 			expect(result2).to.deep.equal(['richard']);
 		});
-		xit("should make the fuzzy tolerance an option", function() {
+		it("should make the fuzzy tolerance an option", function() {
 			// example: fuzzySearch(search, listOfWords, fuzzySearch, tolerance)
 			var result1 = fuzzySearch('roperp', names, true, 2);
 			var result2 = fuzzySearch('matt', names, true, 3);
