@@ -1,4 +1,4 @@
-var say = require('../solutions/yourfile.js');
+var say = require('../solutions/mySolution.js');
 var assert = require('assert');
 
 describe('say', function () {
@@ -7,7 +7,7 @@ describe('say', function () {
     assert.equal(say.inEnglish(0), 'zero');
   });
 
-  xit('one', function () {
+  it('one', function () {
     assert.equal(say.inEnglish(1), 'one');
   });
 
